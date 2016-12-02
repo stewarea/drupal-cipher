@@ -98,7 +98,8 @@
         $encrypted_text .= $alphabet[($flip[$phrase[$i]] + $number)%26];
 
       } elseif($direction == 'left' || $direction == 'r'){
-        $encrypted_text .= $alphabet[($flip[$phrase[$i]] - $number)%26];
+
+        $encrypted_text .= $alphabet[(26 + $flip[$phrase[$i]] - $number)%26];
       }
 
     }
