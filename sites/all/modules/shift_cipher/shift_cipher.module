@@ -60,8 +60,8 @@
   }
 
   function element_validate_text($element) {
-    $ok = array(' ', '.');
-    $new_ok = array('', '');
+    $ok = array(' ', '.', '?', ',', '!');
+    $new_ok = array('', '', '', '', '');
     $string = $element['#value'];
     if(ctype_alpha(str_replace($ok, $new_ok, $string) ) === false) {
       form_error($element, t('Please only enter letters'));
@@ -82,18 +82,19 @@
     $direction = $_SESSION['direction'];
     $number = $_SESSION['number'];
     $phrase = $_SESSION['phrase'] ;
-    // $length = strlen($phrase);
 
     $alphabet = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
     $flip = array_flip($alphabet);
 
     $encrypted_text = '';
 
-    for($i=0; $i < strlen($phrase); $i++){
-      if($i = '.') {
-        $encrypted_text .= ' '; }
 
-      if($direction == 'right' || $direction == 'r') {
+    for($i=0; $i < strlen($phrase); $i++){
+
+      if(ctype_alpha($phrase[$i]) === false) {
+        $encrypted_text .= $phrase[$i];
+
+      } elseif($direction == 'right' || $direction == 'r') {
         $encrypted_text .= $alphabet[($flip[$phrase[$i]] + $number)%26];
 
       } elseif($direction == 'left' || $direction == 'r'){
