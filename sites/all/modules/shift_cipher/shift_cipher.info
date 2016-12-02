@@ -3,3 +3,4 @@ description = Encrypt messages
 package = Custom Modules
 core = 7.x
 files[] = shift_cipher.module
+styles[all][] = myStyles.css

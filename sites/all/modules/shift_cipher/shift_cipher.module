@@ -25,7 +25,7 @@
       '#title' => 'Value',
       '#type' => 'textfield',
       '#element_validate' => array('element_validate_integer_positive'),
-      '#description' => 'Enter in a value between 1-10',
+      '#description' => 'Enter in a value',
       '#required' => TRUE,
     );
     $form['direction'] = array(
@@ -36,15 +36,17 @@
       '#required' => TRUE,
     );
     $form['phrase'] = array(
-      '#title' => 'Phase',
+      '#title' => 'Phrase',
       '#type' => 'textfield',
       '#description' => 'Enter a message to encrypt',
       '#element_validate' => array('element_validate_text'),
       '#required' => TRUE,
     );
     $form['submit'] = array(
+      '#attributes' => array('class' => array('bigButton')),
       '#value' => 'Encrypt',
-      '#type' => 'submit',
+      '#type' => 'image_button',
+      '#src' => 'http://i2.kym-cdn.com/photos/images/original/000/913/847/3ea.gif',
     );
     return $form;
   }

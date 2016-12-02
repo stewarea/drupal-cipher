@@ -1,0 +1,66 @@
+li a {
+  color: #524752;
+  text-decoration: underline;
+  background-color: #36c7d1;
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+#content-wrapper h1 {
+  font-family: 'Comic Sans MS',Cursive;
+  color: #ba3fba;
+}
+
+#block-system-navigation h2 {
+  font-family: 'Comic Sans MS',Cursive;
+  background-color: #c64ad9;
+  color: #fff0ff;
+}
+
+#page #main-content {
+  color: #080808;
+  background-color: #7fdb91;
+}
+
+.col-md-12 #site-slogan {
+  color: #ededed;
+  font-family: 'Comic Sans MS',Cursive;
+  text-decoration: underline;
+}
+
+.form-item label {
+  color: #2e13f5;
+  font-family: 'Comic Sans MS',Cursive;
+  font-size: 18px;
+}
+
+.form-item .description {
+  font-family: 'Comic Sans MS',Cursive;
+  font-size: 27px;
+}
+
+#block-system-main .content {
+  font-size: 61px;
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+.submitted span {
+  color: #877187;
+  font-size: 27px;
+}
+
+#header-wrapper p {
+  font-family: 'Comic Sans MS',Cursive;
+}
+
+.form-item .form-text {
+  font-size: 27px;
+}
+
+ul li {
+  font-size: 18px;
+}
+
+form div {
+  font-size: 37px;
+}
+
