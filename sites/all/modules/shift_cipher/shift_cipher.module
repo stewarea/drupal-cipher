@@ -65,3 +65,26 @@
       form_error($element, t('Please only enter letters'));
     }
   }
+
+  function shift_cipher_form_submit($form, &$form_state) {
+    $_SESSION['number'] = $form_state['values']['number'];
+    $_SESSION['direction'] = $form_state['values']['direction'];
+    $_SESSION['phrase'] = strtolower($form_state['values']['phrase']);
+
+    $form_state['redirect'] = 'shift_cipher_success';
+  }
+
+  function shift_cipher_success_page() {
+
+    $direction = $_SESSION['direction'];
+    $number = $_SESSION['number'];
+    $phrase = $_SESSION['phrase'] ;
+    $length = strlen($phrase);
+
+    // for($i=0; $i < $length; $i++){
+    //
+    // }
+
+    return $phrase;
+
+  }
