@@ -1,4 +1,7 @@
 <?php
+
+
+//menu*********************************************
   function shift_cipher_menu() {
     $items = array();
     $items['shift'] = array(
@@ -19,6 +22,7 @@
 
 
 
+//form********************************************
   function shift_cipher_form() {
     $form = array();
     $form['number'] = array(
@@ -51,6 +55,11 @@
     return $form;
   }
 
+
+
+
+// Validations ****************************************
+
   function element_validate_direction($element) {
     $direction = $element['#value'];
     $direction_case = strtolower($direction);
@@ -67,8 +76,8 @@
     $string = $element['#value'];
     if(ctype_alpha(str_replace($ok, $new_ok, $string) ) === false) {
       form_error($element, t('Please only enter letters'));
-}
-}
+    }
+  }
 
   function shift_cipher_form_submit($form, &$form_state) {
     $_SESSION['number'] = $form_state['values']['number'];
@@ -79,13 +88,17 @@
     $form_state['redirect'] = 'shift_cipher_success';
   }
 
+
+
+//redirect and logic**********************************************
   function shift_cipher_success_page() {
 
     $direction = $_SESSION['direction'];
     $number = $_SESSION['number'];
     $phrase = $_SESSION['phrase'] ;
 
-    $alphabet = array('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
+    $alphabet = range('a', 'z');
+
     $flip = array_flip($alphabet);
 
     $encrypted_text = '';
