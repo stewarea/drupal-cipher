@@ -1,6 +1,6 @@
 <div id="header-banner-wrapper">
     <div id="header-wrapper">
-      <p>Shift Cipher</p>
+      <p>Cipher Underground</p>
 <?php if ($page['header_top_left'] || $page['header_top_right']) :?>
 <!-- #header-top -->
 
