@@ -1,7 +1,7 @@
 .col-md-12 #site-slogan {
   font-family: 'Comic Sans MS',Cursive;
   font-size: 22px;
-  color: #d8ff3b;
+  color: #d6ff30;
   text-decoration: line-through;
 }
 
@@ -60,5 +60,9 @@ h2 a {
   font-family: 'Comic Sans MS',Cursive;
   color: #ffffff;
   font-size: 44px;
+}
+
+.form-item .form-text {
+  color: #000000;
 }
 
