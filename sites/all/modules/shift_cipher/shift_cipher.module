@@ -106,7 +106,10 @@
 
     for($i=0; $i < strlen($phrase); $i++){
 
-      if(ctype_alpha($phrase[$i]) === false) {
+      if($phrase[$i] == " " ){
+        $encrypted_text .= '&nbsp';
+
+      } elseif(ctype_alpha($phrase[$i]) === false) {
         $encrypted_text .= $phrase[$i];
 
       } elseif($direction == 'right' || $direction == 'r') {
